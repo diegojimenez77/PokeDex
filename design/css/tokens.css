@@ -1,0 +1,158 @@
+/**
+ * Design tokens — Pokédex (design/)
+ * Base tipográfica: html 62.5% → 1rem = 10px
+ */
+
+:root {
+  /* Colores del tema (design / Material) */
+  --color-background: #131313;
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-variant: #353534;
+  --color-surface-bright: #393939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-background: #e5e2e1;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #eabcb6;
+  --color-outline: #b08781;
+  --color-outline-variant: #5f3f3a;
+  --color-primary: #ffb4aa;
+  --color-on-primary: #690003;
+  --color-primary-container: #ff5545;
+  --color-on-primary-container: #5c0002;
+  --color-secondary: #bcc2ff;
+  --color-secondary-container: #2638b8;
+  --color-on-secondary-container: #aab3ff;
+  --color-on-secondary-fixed: #000b62;
+  --color-tertiary: #98cbff;
+  --color-tertiary-container: #2b97e4;
+  --color-inverse-on-surface: #313030;
+
+  /* UI zinc / acento rojo (Tailwind-equivalente) */
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-gray-400: #9ca3af;
+  --color-gray-950: #030712;
+  --color-red-50: #fef2f2;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-900-30: rgba(127, 29, 29, 0.3);
+  --color-red-950-20: rgba(69, 10, 10, 0.2);
+  --color-neutral-500: #737373;
+
+  /* Tipos (filtros / badges) */
+  --color-type-normal-dot: #a1a1aa;
+  --color-type-fire-bg: rgba(127, 29, 29, 0.3);
+  --color-type-fire-text: #fca5a5;
+  --color-type-fire-border: #991b1b;
+  --color-type-fire-dot: #ef4444;
+  --color-type-water-bg: rgba(30, 58, 138, 0.3);
+  --color-type-water-text: #93c5fd;
+  --color-type-water-border: #1e40af;
+  --color-type-water-dot: #3b82f6;
+  --color-type-grass-bg: rgba(20, 83, 45, 0.3);
+  --color-type-grass-text: #86efac;
+  --color-type-grass-border: #166534;
+  --color-type-grass-dot: #22c55e;
+  --color-type-electric-bg: rgba(113, 63, 18, 0.3);
+  --color-type-electric-text: #fde047;
+  --color-type-electric-border: #a16207;
+  --color-type-electric-dot: #eab308;
+  --color-type-psychic-bg: rgba(88, 28, 135, 0.3);
+  --color-type-psychic-text: #d8b4fe;
+  --color-type-psychic-border: #6b21a8;
+  --color-type-psychic-dot: #a855f7;
+
+  /* Detalle escritorio — fuego */
+  --color-type-fire-accent: #ff9c54;
+  --color-type-flying-accent: #8fa8dd;
+
+  /* Espaciado (rem, 1rem = 10px) */
+  --space-unit: 0.8rem;
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.2rem;
+  --space-base: 1.6rem;
+  --space-lg: 2rem;
+  --space-xl: 2.4rem;
+  --space-2xl: 3.2rem;
+  --space-3xl: 4rem;
+  --space-4xl: 4.8rem;
+  --space-5xl: 6.4rem;
+  --space-6xl: 9.6rem;
+  --container-padding: 2.4rem;
+  --card-gap: 2rem;
+  --gutter: 1.6rem;
+
+  /* Radios */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.2rem;
+  --radius-xl: 1.6rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Tipografía */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --text-label: 1.2rem;
+  --lh-label: 1;
+  --ls-label: 0.05em;
+  --text-body: 1.6rem;
+  --lh-body: 1.6;
+  --text-title-sm: 1.8rem;
+  --lh-title-sm: 1.4;
+  --text-headline: 2.4rem;
+  --lh-headline: 1.2;
+  --text-display: 4.8rem;
+  --lh-display: 1.1;
+  --ls-display: -0.02em;
+  --text-brand: 2.4rem;
+
+  /* Layout */
+  --max-w-screen-2xl: 153.6rem;
+  --max-w-4xl: 89.6rem;
+  --max-w-7xl: 128rem;
+  --max-w-2xl: 67.2rem;
+  --max-w-md: 44.8rem;
+  --side-nav-width: 25.6rem;
+  /* Altura reservada del shell (navbar); debe coincidir con .page-fav-desk__header min-height */
+  --shell-header-height: 7.6rem;
+  --z-sticky: 30;
+  --z-nav: 40;
+  --z-header: 50;
+  --z-side-backdrop: 54;
+  --z-side-drawer: 55;
+  --z-header-shell: 60;
+
+  /* Sombras */
+  --shadow-header: 0 0.4rem 3rem rgba(255, 28, 28, 0.1);
+  --shadow-bottom-nav: 0 -0.8rem 3rem rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 0.8rem 3rem rgba(0, 0, 0, 0.5);
+  --shadow-card-hover-fire: 0 0.8rem 3rem rgba(255, 85, 69, 0.15);
+  --shadow-glow-primary: 0 0 1.5rem rgba(255, 85, 69, 0.3);
+  --shadow-glow-primary-lg: 0 0 2.5rem rgba(255, 85, 69, 0.5);
+  --shadow-header-desk: 0 2.5rem 5rem -1.2rem rgba(127, 29, 29, 0.1);
+  --shadow-brand: 0 0 0.8rem rgba(255, 28, 28, 0.4);
+
+  /* Breakpoints (solo documentación; usar en @media) */
+  --bp-sm: 40em;
+  --bp-md: 48em;
+  --bp-lg: 64em;
+  --bp-xl: 80em;
+  --bp-2xl: 96em;
+}

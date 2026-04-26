@@ -1,0 +1,273 @@
+/**
+ * Página: favoritos móvil (mis_favoritos)
+ */
+
+.page-favoritos {
+  overflow-x: hidden;
+}
+
+.page-favoritos__main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-w-screen-2xl);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--container-padding) var(--space-6xl);
+}
+
+@media (min-width: 48em) {
+  .page-favoritos__main {
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-6xl);
+  }
+}
+
+.page-favoritos__intro {
+  margin-bottom: var(--space-4xl);
+}
+
+.page-favoritos__intro-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 48em) {
+  .page-favoritos__intro-row {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.page-favoritos__subtitle {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-on-background);
+}
+
+.page-favoritos__lead {
+  margin: 0;
+  max-width: var(--max-w-2xl);
+  color: var(--color-on-surface-variant);
+}
+
+.page-favoritos__sort {
+  display: flex;
+  gap: var(--space-base);
+}
+
+.page-favoritos__sort-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-base);
+  border-radius: var(--radius-md);
+  background: rgba(42, 42, 42, 0.8);
+  backdrop-filter: blur(1.6rem);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.page-favoritos__sort-chip .material-symbols-outlined {
+  color: var(--color-tertiary);
+}
+
+.page-favoritos__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--card-gap);
+}
+
+@media (min-width: 48em) {
+  .page-favoritos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .page-favoritos__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 80em) {
+  .page-favoritos__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tarjeta favorito glass */
+.poke-fav-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(42, 42, 42, 0.8);
+  backdrop-filter: blur(1.6rem);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.poke-fav-card:hover {
+  box-shadow: var(--shadow-card-hover-fire);
+}
+
+.poke-fav-card--accent-secondary:hover {
+  box-shadow: 0 0.8rem 3rem rgba(188, 194, 255, 0.15);
+}
+
+.poke-fav-card--accent-tertiary:hover {
+  box-shadow: 0 0.8rem 3rem rgba(43, 151, 228, 0.15);
+}
+
+.poke-fav-card__wash {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 85, 69, 0.1), transparent);
+}
+
+.poke-fav-card--accent-secondary .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(188, 194, 255, 0.1), transparent);
+}
+
+.poke-fav-card--accent-tertiary .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(43, 151, 228, 0.1), transparent);
+}
+
+.poke-fav-card__top {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-base);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.poke-fav-card__id {
+  font-size: var(--text-label);
+  color: var(--color-on-surface-variant);
+  background: var(--color-surface-container-highest);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+}
+
+.poke-fav-card__fav {
+  color: var(--color-primary-container);
+  transition: transform 0.2s ease;
+}
+
+.poke-fav-card__fav:hover {
+  transform: scale(1.1);
+}
+
+.poke-fav-card__media {
+  position: relative;
+  z-index: 1;
+  height: 19.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3.2rem;
+}
+
+.poke-fav-card__img {
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2.5rem 2.5rem rgba(0, 0, 0, 0.35));
+  transition: transform 0.5s ease;
+}
+
+.poke-fav-card:hover .poke-fav-card__img {
+  transform: scale(1.05);
+}
+
+.poke-fav-card__body {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--space-xl) var(--space-xl);
+}
+
+.poke-fav-card__name {
+  margin: 0 0 var(--space-md);
+  color: var(--color-on-background);
+}
+
+.poke-fav-card__types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.poke-mini-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.poke-mini-type--fire {
+  background: #ff5545;
+  color: #fff;
+}
+
+.poke-mini-type--fly {
+  background: #aab3ff;
+  color: var(--color-on-secondary-fixed);
+}
+
+.poke-mini-type--ghost {
+  background: #bcc2ff;
+  color: var(--color-on-secondary-fixed);
+}
+
+.poke-mini-type--ghost .material-symbols-outlined {
+  color: inherit;
+}
+
+.poke-mini-type--poison {
+  background: #b08781;
+  color: #fff;
+}
+
+.poke-mini-type--fight {
+  background: #2b97e4;
+  color: #fff;
+}
+
+.poke-mini-type--steel {
+  background: #e5e2e1;
+  color: var(--color-on-background);
+}
+
+.poke-mini-type--grass {
+  background: #16a34a;
+  color: #fff;
+}
+
+.poke-mini-type--water {
+  background: #2563eb;
+  color: #fff;
+}
+
+.poke-mini-type--electric {
+  background: #ca8a04;
+  color: #fff;
+}
+
+.poke-mini-type--psychic {
+  background: #9333ea;
+  color: #fff;
+}
+
+.poke-mini-type--dragon {
+  background: #ea580c;
+  color: #fff;
+}

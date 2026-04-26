@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prism Dex — Inicio</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/tokens.css"/>
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+<link rel="stylesheet" href="../css/layout-shell.css"/>
+<link rel="stylesheet" href="../css/page-favoritos-escritorio.css"/>
+<link rel="stylesheet" href="../css/page-landing.css"/>
+</head>
+<body class="page-fav-desk dex-scrollbar">
+<button type="button" class="app-side-nav-backdrop" id="app-side-nav-backdrop" aria-label="Cerrar menú lateral" hidden></button>
+<aside id="app-side-nav" class="app-side-nav" aria-label="Navegación lateral">
+<div class="app-side-nav__profile">
+<img class="app-side-nav__avatar app-side-nav__avatar--primary-container" alt="Perfil de usuario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZdYsn_qS0K8GBMSHUYqnnLagymqA6ZCY2YrJv7TcJ6kZXmyBaSQ2zJkMzfhL7MQuEavL6SB2w8JSvA0lrdrKhYWFiJTq2XuXLCH5WpIoHky3LOCOcS59ViuTTzzdYRU-AoxyTiBn0JUJ_0Df7We9EZRRPWUxJV8UbdvCmlgKajtLnNCFW56bCvvBo-BymG0M1_U7cBoY1zPlYKIk6GB7yOalmfoJh806kwEbORwHFFyZ1OS5LlclmPp_-4u9kjTyaiMEQjpuGozXn"/>
+<div>
+<h2 class="app-side-nav__name">Entrenador Rojo</h2>
+<p class="app-side-nav__role">Alto Mando</p>
+</div>
+</div>
+<div class="app-side-nav__cta">
+<button type="button" class="app-side-nav__cta-btn app-side-nav__cta-btn--glow app-side-nav__cta-btn--compact">Filtro avanzado</button>
+</div>
+<nav class="app-side-nav__links" aria-label="Secciones principales">
+<a class="app-side-nav__link app-side-nav__link--active" href="../landing/code.html">
+<span class="material-symbols-outlined material-symbols-outlined--fill">home</span>
+Inicio
+</a>
+<a class="app-side-nav__link" href="../pokedex_explorar/code.html">
+<span class="material-symbols-outlined">capture</span>
+Explorar
+</a>
+<a class="app-side-nav__link" href="../mis_favoritos_escritorio/code.html">
+<span class="material-symbols-outlined">favorite</span>
+Favoritos
+</a>
+<a class="app-side-nav__link" href="../detalle_de_pok_mon_escritorio/code.html">
+<span class="material-symbols-outlined">description</span>
+Ficha demo
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">map</span>
+Regiones
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">bolt</span>
+Habilidades
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">category</span>
+Tipos
+</a>
+</nav>
+<div class="app-side-nav__footer">
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">settings</span>
+Ajustes
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">logout</span>
+Cerrar sesión
+</a>
+</div>
+</aside>
+<main class="page-fav-desk__main">
+<header class="page-fav-desk__header">
+<div class="page-fav-desk__header-left">
+<button type="button" class="page-fav-desk__menu-btn app-side-nav-toggle" aria-expanded="false" aria-controls="app-side-nav" aria-label="Abrir menú de navegación">
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--open material-symbols-outlined" aria-hidden="true">menu</span>
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--close material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+<a class="page-fav-desk__logo" href="../landing/code.html">Prism Dex</a>
+</div>
+<div class="page-fav-desk__header-right">
+<div class="page-fav-desk__search">
+<span class="material-symbols-outlined page-fav-desk__search-icon">search</span>
+<label class="visually-hidden" for="desk-search-landing">Buscar Pokémon</label>
+<input id="desk-search-landing" class="page-fav-desk__search-input" type="search" placeholder="Buscar por nombre o número..." autocomplete="off"/>
+</div>
+<div class="page-fav-desk__icon-btns">
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cambiar tema claro u oscuro">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cuenta">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Ajustes">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<div class="page-fav-desk__scroll dex-scrollbar">
+<div class="page-fav-desk__scroll-inner">
+<div class="page-landing">
+<section class="page-landing__hero" aria-labelledby="landing-hero-title">
+<p class="page-landing__badge"><span class="material-symbols-outlined material-symbols-outlined--xs">bolt</span> PokéAPI · Sin clave</p>
+<h1 id="landing-hero-title" class="page-landing__title dex-text-display">Explora, conoce y guarda Pokémon en tu Pokéball digital</h1>
+<p class="page-landing__lead">Prism Dex es una aplicación web tipo Pokédex: busca por nombre o número, recorre el listado con desplazamiento infinito, abre la ficha con arte oficial, tipos con color, estadísticas con barras, cadena evolutiva y favoritos que persisten en el navegador. Todo en español, con manejo de errores y estados de carga.</p>
+<div class="page-landing__cta-row">
+<a class="page-landing__btn page-landing__btn--primary" href="../pokedex_explorar/code.html">
+<span class="material-symbols-outlined">travel_explore</span>
+Ir a explorar
+</a>
+<a class="page-landing__btn page-landing__btn--secondary" href="../mis_favoritos_escritorio/code.html">
+<span class="material-symbols-outlined">favorite</span>
+Ver favoritos
+</a>
+</div>
+</section>
+<section class="page-landing__section" aria-labelledby="features-title">
+<h2 id="features-title" class="page-landing__section-title dex-text-headline">Funciones previstas</h2>
+<p class="page-landing__section-intro dex-text-body">Basado en el alcance del proyecto: consumo de la API pública, experiencia responsive y feedback visual sin modales del navegador.</p>
+<div class="page-landing__features">
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">search</span></div>
+<h3 class="page-landing__feature-title">Búsqueda</h3>
+<p class="page-landing__feature-text">Encuentra Pokémon por nombre o ID y actualiza la vista al instante.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">all_inclusive</span></div>
+<h3 class="page-landing__feature-title">Listado infinito</h3>
+<p class="page-landing__feature-text">Catálogo paginado con scroll infinito para cargar más especies sin cambiar de página.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">image</span></div>
+<h3 class="page-landing__feature-title">Detalle e imagen</h3>
+<p class="page-landing__feature-text">Ficha completa con ilustración oficial y datos de la API.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">palette</span></div>
+<h3 class="page-landing__feature-title">Tipos y stats</h3>
+<p class="page-landing__feature-text">Tipos con códigos de color y estadísticas base con barras visuales.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">account_tree</span></div>
+<h3 class="page-landing__feature-title">Evolución</h3>
+<p class="page-landing__feature-text">Visualiza la cadena evolutiva del Pokémon seleccionado.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">filter_alt</span></div>
+<h3 class="page-landing__feature-title">Filtros</h3>
+<p class="page-landing__feature-text">Filtra por tipo o generación para acotar el listado.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">catching_pokemon</span></div>
+<h3 class="page-landing__feature-title">Favoritos</h3>
+<p class="page-landing__feature-text">Marca favoritos y guárdalos en localStorage, como tu Pokéball personal.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">wifi_off</span></div>
+<h3 class="page-landing__feature-title">Errores y carga</h3>
+<p class="page-landing__feature-text">Mensajes claros si falla la red o no hay resultados, con indicadores tipo spinner.</p>
+</article>
+<article class="page-landing__feature">
+<div class="page-landing__feature-icon"><span class="material-symbols-outlined">dark_mode</span></div>
+<h3 class="page-landing__feature-title">Tema</h3>
+<p class="page-landing__feature-text">Modo claro y oscuro para adaptar la interfaz a tu entorno.</p>
+</article>
+</div>
+</section>
+<section class="page-landing__section" aria-labelledby="flow-title">
+<h2 id="flow-title" class="page-landing__section-title dex-text-headline">Flujo de la app</h2>
+<p class="page-landing__section-intro dex-text-body">Tres pasos que conectan el prototipo de diseño con la experiencia final.</p>
+<div class="page-landing__flow">
+<div class="page-landing__flow-step">
+<span class="page-landing__flow-num">1</span>
+<h3 class="page-landing__flow-title">Explorar</h3>
+<p class="page-landing__flow-text">Navega el listado, filtra y busca. Desde aquí abres cualquier ficha.</p>
+<a class="page-landing__flow-link" href="../pokedex_explorar/code.html">Abrir explorar</a>
+</div>
+<div class="page-landing__flow-step">
+<span class="page-landing__flow-num">2</span>
+<h3 class="page-landing__flow-title">Detalle</h3>
+<p class="page-landing__flow-text">Consulta tipos, estadísticas, habilidades y evolución en vista móvil u escritorio.</p>
+<a class="page-landing__flow-link" href="../detalle_de_pok_mon_escritorio/code.html">Ver ficha demo (escritorio)</a>
+<br/>
+<a class="page-landing__flow-link" href="../detalle_de_pok_mon/code.html">Ver ficha demo (móvil)</a>
+</div>
+<div class="page-landing__flow-step">
+<span class="page-landing__flow-num">3</span>
+<h3 class="page-landing__flow-title">Favoritos</h3>
+<p class="page-landing__flow-text">Los que marques quedan en tu colección local para volver cuando quieras.</p>
+<a class="page-landing__flow-link" href="../mis_favoritos_escritorio/code.html">Mis favoritos (escritorio)</a>
+<br/>
+<a class="page-landing__flow-link" href="../mis_favoritos/code.html">Mis favoritos (móvil)</a>
+</div>
+</div>
+</section>
+<div class="page-landing__api">
+<h2 class="page-landing__api-title dex-text-title-sm">Datos con PokéAPI</h2>
+<p class="page-landing__api-text">Los contenidos se obtienen de la API estable de la comunidad. Ejemplo de recurso de Pokémon:</p>
+<code class="page-landing__api-code">https://pokeapi.co/api/v2/pokemon/{nombre-o-id}</code>
+<p class="page-landing__api-text" style="margin-top:var(--space-md);margin-bottom:0;">Ilustraciones oficiales: <code class="page-landing__api-code" style="display:inline;padding:0.2rem 0.6rem;">https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{id}.png</code></p>
+</div>
+</div>
+</div>
+<footer class="page-fav-desk__footer">
+<div class="page-fav-desk__footer-inner">
+<span class="page-fav-desk__footer-brand">Prism Dex</span>
+<nav class="page-fav-desk__footer-links" aria-label="Enlaces del pie">
+<a class="page-fav-desk__footer-link" href="../landing/code.html">Inicio</a>
+<a class="page-fav-desk__footer-link" href="../pokedex_explorar/code.html">Explorar</a>
+<a class="page-fav-desk__footer-link" href="../mis_favoritos_escritorio/code.html">Favoritos</a>
+<a class="page-fav-desk__footer-link" href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+</nav>
+<p class="page-fav-desk__footer-copy">Los personajes Pokémon son marcas de Nintendo/Game Freak/Creatures. Esta maqueta es educativa y usa datos públicos.</p>
+</div>
+</footer>
+</div>
+</main>
+<script src="../js/sidebar-toggle.js" defer></script>
+</body>
+</html>

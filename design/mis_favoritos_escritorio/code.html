@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mis favoritos — Prism Dex</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/tokens.css"/>
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+<link rel="stylesheet" href="../css/layout-shell.css"/>
+<link rel="stylesheet" href="../css/page-favoritos-escritorio.css"/>
+</head>
+<body class="page-fav-desk dex-scrollbar">
+<button type="button" class="app-side-nav-backdrop" id="app-side-nav-backdrop" aria-label="Cerrar menú lateral" hidden></button>
+<aside id="app-side-nav" class="app-side-nav" aria-label="Navegación lateral">
+<div class="app-side-nav__profile">
+<img class="app-side-nav__avatar app-side-nav__avatar--primary-container" alt="Perfil de usuario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZdYsn_qS0K8GBMSHUYqnnLagymqA6ZCY2YrJv7TcJ6kZXmyBaSQ2zJkMzfhL7MQuEavL6SB2w8JSvA0lrdrKhYWFiJTq2XuXLCH5WpIoHky3LOCOcS59ViuTTzzdYRU-AoxyTiBn0JUJ_0Df7We9EZRRPWUxJV8UbdvCmlgKajtLnNCFW56bCvvBo-BymG0M1_U7cBoY1zPlYKIk6GB7yOalmfoJh806kwEbORwHFFyZ1OS5LlclmPp_-4u9kjTyaiMEQjpuGozXn"/>
+<div>
+<h2 class="app-side-nav__name">Entrenador Rojo</h2>
+<p class="app-side-nav__role">Alto Mando</p>
+</div>
+</div>
+<div class="app-side-nav__cta">
+<button type="button" class="app-side-nav__cta-btn app-side-nav__cta-btn--glow app-side-nav__cta-btn--compact">Filtro avanzado</button>
+</div>
+<nav class="app-side-nav__links" aria-label="Secciones principales">
+<a class="app-side-nav__link" href="../landing/code.html">
+<span class="material-symbols-outlined">home</span>
+Inicio
+</a>
+<a class="app-side-nav__link" href="../pokedex_explorar/code.html">
+<span class="material-symbols-outlined">capture</span>
+Explorar
+</a>
+<a class="app-side-nav__link app-side-nav__link--active" href="code.html">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+Favoritos
+</a>
+<a class="app-side-nav__link" href="../detalle_de_pok_mon_escritorio/code.html">
+<span class="material-symbols-outlined">description</span>
+Ficha demo
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">map</span>
+Regiones
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">bolt</span>
+Habilidades
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">category</span>
+Tipos
+</a>
+</nav>
+<div class="app-side-nav__footer">
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">settings</span>
+Ajustes
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">logout</span>
+Cerrar sesión
+</a>
+</div>
+</aside>
+<main class="page-fav-desk__main">
+<header class="page-fav-desk__header">
+<div class="page-fav-desk__header-left">
+<button type="button" class="page-fav-desk__menu-btn app-side-nav-toggle" aria-expanded="false" aria-controls="app-side-nav" aria-label="Abrir menú de navegación">
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--open material-symbols-outlined" aria-hidden="true">menu</span>
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--close material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+<a class="page-fav-desk__logo" href="../landing/code.html">Prism Dex</a>
+</div>
+<div class="page-fav-desk__header-right">
+<div class="page-fav-desk__search">
+<span class="material-symbols-outlined page-fav-desk__search-icon">search</span>
+<label class="visually-hidden" for="desk-search-fav-desk">Buscar Pokémon</label>
+<input id="desk-search-fav-desk" class="page-fav-desk__search-input" type="search" placeholder="Buscar por nombre o número..." autocomplete="off"/>
+</div>
+<div class="page-fav-desk__icon-btns">
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cambiar tema claro u oscuro">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cuenta">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Ajustes">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<div class="page-fav-desk__scroll dex-scrollbar">
+<div class="page-fav-desk__scroll-inner">
+<div class="page-fav-desk__page-head">
+<div>
+<div class="page-fav-desk__title-row">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+<h1 class="page-fav-desk__title dex-text-display">Mis favoritos</h1>
+</div>
+<p class="page-fav-desk__subtitle dex-text-body">6 Pokémon guardados en tu Pokéball (localStorage). <a href="../mis_favoritos/code.html" style="color:var(--color-tertiary);font-weight:600;">Ver vista móvil</a></p>
+</div>
+<div class="page-fav-desk__sort" role="group" aria-label="Ordenar">
+<button type="button" class="page-fav-desk__sort-btn page-fav-desk__sort-btn--active">
+<span class="material-symbols-outlined material-symbols-outlined--xs">tag</span>
+Número
+</button>
+<button type="button" class="page-fav-desk__sort-btn">
+<span class="material-symbols-outlined material-symbols-outlined--xs">sort_by_alpha</span>
+Nombre
+</button>
+</div>
+</div>
+<div class="page-fav-desk__grid">
+<div class="poke-fav-desk-card">
+<div class="poke-fav-desk-card__glow" aria-hidden="true"></div>
+<div class="poke-fav-desk-card__float">
+<img alt="Charizard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn8m_tiWIkyUCLExrK-h0gQqDYSSl5yJgAthsrbPo2I-XCgFbEhnkrQfUKF0KT0bLRUQgFDI2E4ThHGauwg1aP3IgHokWOZ3knVLU0MDbst3MFc0jXPbNsccbpAHMiB3rXNItvUDocZEoaoLn9-6MRjub9aiT-Q6gFJbne8OY7hK2y3V9tHd4LtNtQnQmvnQK9wFqX5hZxFU771OT2wYhrb67EqneGB7HXjhIQXqiPc9G4LjT_2OR4UivtmNnM9uaFZMcREh-Q8oUk"/>
+</div>
+<div class="poke-fav-desk-card__row">
+<div>
+<span class="poke-fav-desk-card__id">#0006</span>
+<h3 class="poke-fav-desk-card__name">Charizard</h3>
+</div>
+<button type="button" class="poke-fav-desk-card__fav" aria-label="Quitar de favoritos">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+</button>
+</div>
+<div class="poke-fav-desk-card__types">
+<span class="poke-desk-type poke-desk-type--fire">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">local_fire_department</span>
+FUEGO
+</span>
+<span class="poke-desk-type poke-desk-type--fly">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">air</span>
+VOLADOR
+</span>
+</div>
+</div>
+<div class="poke-fav-desk-card poke-fav-desk-card--ghost">
+<div class="poke-fav-desk-card__glow" aria-hidden="true"></div>
+<div class="poke-fav-desk-card__float poke-fav-desk-card__float--screen">
+<img alt="Gengar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLScSA8nbn09wx6W9ifZ5t7tCLfC6CiiOqdLKAePCl6ebQYMJ1bboodqPuSvw0hATzjdp6Y-PYweQi0oO1eWyy_JC5XGqFVf5iK5rnfsemAPBDFXDJAlGvsxrvSHOC8kk5LHNHUz1TgL8nxyMGR6Supy4vANJ6pJAycgh19qbxIhA4q97Zbqh-qKEytbiJXIL1_XuUvgFMgW69pcBZWo6hdCrNNPkORPUCK-kXpeWTT7zxy0lJc8Z4XWhoy-3ZiEzkgBI6Q-ABh0p"/>
+</div>
+<div class="poke-fav-desk-card__row">
+<div>
+<span class="poke-fav-desk-card__id">#0094</span>
+<h3 class="poke-fav-desk-card__name">Gengar</h3>
+</div>
+<button type="button" class="poke-fav-desk-card__fav" aria-label="Quitar de favoritos">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+</button>
+</div>
+<div class="poke-fav-desk-card__types">
+<span class="poke-desk-type poke-desk-type--ghost">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">visibility_off</span>
+FANTASMA
+</span>
+<span class="poke-desk-type poke-desk-type--poison">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">science</span>
+VENENO
+</span>
+</div>
+</div>
+<div class="poke-fav-desk-card poke-fav-desk-card--dark">
+<div class="poke-fav-desk-card__glow" aria-hidden="true"></div>
+<div class="poke-fav-desk-card__float">
+<img alt="Umbreon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpJoi7fIV_SQUSateLQTZgR5DWXhnSlQvFz-PIz5kOagku_DW23CVssiuGlR37BmSHUsxBu8sNrl69-_cDgvtCgHNXdVG-ZxYzzUb86U8yqsv2ZSR0bMXf6pJaoYyJc4jjSWJkwkHgIU152vAV5ZSeP2a33I-hdrqTx9UVN5JofNYk-Oukos9O5X0WU_3DUFO0h2XW9LYeIGk8JsovQQbaGgVN8c4Ez3rCcVEPrjI1CKxUyyQ9_w7xOT93nWEzCAxCqEC9Vmo76iCV"/>
+</div>
+<div class="poke-fav-desk-card__row">
+<div>
+<span class="poke-fav-desk-card__id">#0197</span>
+<h3 class="poke-fav-desk-card__name">Umbreon</h3>
+</div>
+<button type="button" class="poke-fav-desk-card__fav" aria-label="Quitar de favoritos">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+</button>
+</div>
+<div class="poke-fav-desk-card__types">
+<span class="poke-desk-type poke-desk-type--dark">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">dark_mode</span>
+SINIESTRO
+</span>
+</div>
+</div>
+<div class="poke-fav-desk-card poke-fav-desk-card--fight">
+<div class="poke-fav-desk-card__glow" aria-hidden="true"></div>
+<div class="poke-fav-desk-card__float">
+<img alt="Lucario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUCiqxOHCgBaEzyfxr5CNWRlUlf3gNtpCl38MCwiwmrQ6k360A6um0zCDcIK80Nd7LSVIpWHCgl-UZPwBK7RDG9CeLM-olWM2ta_vwimNLV4Gl7PtZ82YXNaMzUwITj8rCSwdULy8h8FIgmGczqmMngLxkjNrSXWqgCR_T6GyzjAA1Y8SCt6zVUE753QZKKTgenOlkuEmdPC1TKlCnQCAr5Y1UlzDgqWLupKpsYQe18NoOkyRPO4IAA1hw7tSkRVvCuemOtG1-PhUD"/>
+</div>
+<div class="poke-fav-desk-card__row">
+<div>
+<span class="poke-fav-desk-card__id">#0448</span>
+<h3 class="poke-fav-desk-card__name">Lucario</h3>
+</div>
+<button type="button" class="poke-fav-desk-card__fav" aria-label="Quitar de favoritos">
+<span class="material-symbols-outlined material-symbols-outlined--fill">favorite</span>
+</button>
+</div>
+<div class="poke-fav-desk-card__types">
+<span class="poke-desk-type poke-desk-type--fight">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">sports_martial_arts</span>
+LUCHA
+</span>
+<span class="poke-desk-type poke-desk-type--steel">
+<span class="material-symbols-outlined" style="font-size:1.2rem;">hardware</span>
+ACERO
+</span>
+</div>
+</div>
+</div>
+</div>
+<footer class="page-fav-desk__footer">
+<div class="page-fav-desk__footer-inner">
+<span class="page-fav-desk__footer-brand">Prism Dex</span>
+<nav class="page-fav-desk__footer-links" aria-label="Enlaces del pie">
+<a class="page-fav-desk__footer-link" href="../landing/code.html">Inicio</a>
+<a class="page-fav-desk__footer-link" href="../pokedex_explorar/code.html">Explorar</a>
+<a class="page-fav-desk__footer-link" href="code.html">Favoritos</a>
+<a class="page-fav-desk__footer-link" href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+</nav>
+<p class="page-fav-desk__footer-copy">Los personajes Pokémon son marcas de Nintendo/Game Freak/Creatures. Esta maqueta es educativa y usa datos públicos.</p>
+</div>
+</footer>
+</div>
+</main>
+<script src="../js/sidebar-toggle.js" defer></script>
+</body>
+</html>

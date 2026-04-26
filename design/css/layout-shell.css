@@ -1,0 +1,93 @@
+/**
+ * Shell global: header Prism Dex, scroll y pie (todas las pantallas design/)
+ */
+
+.page-fav-desk__logo {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.page-fav-desk__logo:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.page-fav-desk__scroll {
+  min-height: 0;
+}
+
+.page-fav-desk__footer {
+  flex-shrink: 0;
+  margin-top: var(--space-4xl);
+  padding: var(--space-4xl) var(--container-padding);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 9, 11, 0.95);
+}
+
+.page-fav-desk__footer-inner {
+  max-width: var(--max-w-screen-2xl);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+@media (min-width: 48em) {
+  .page-fav-desk__footer-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.page-fav-desk__footer-brand {
+  font-weight: var(--fw-extrabold);
+  font-size: var(--text-title-sm);
+  color: var(--color-on-background);
+}
+
+.page-fav-desk__footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 48em) {
+  .page-fav-desk__footer-links {
+    justify-content: flex-end;
+  }
+}
+
+.page-fav-desk__footer-link {
+  font-size: 1.2rem;
+  color: var(--color-zinc-400);
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.page-fav-desk__footer-link:hover {
+  opacity: 1;
+  color: var(--color-red-400);
+}
+
+.page-fav-desk__footer-copy {
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--color-zinc-500);
+}
+
+@media (min-width: 48em) {
+  .page-fav-desk__footer-copy {
+    width: auto;
+    flex-basis: 100%;
+    text-align: center;
+  }
+}

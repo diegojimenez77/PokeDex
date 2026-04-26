@@ -1,0 +1,160 @@
+/**
+ * Base — reset mínimo, tipografía, iconos Material
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  min-height: max(88.4rem, 100dvh);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  font: inherit;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined--fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined--xl {
+  font-size: 3.6rem;
+}
+
+.material-symbols-outlined--lg {
+  font-size: 2.4rem;
+}
+
+.material-symbols-outlined--md {
+  font-size: 1.8rem;
+}
+
+.material-symbols-outlined--sm {
+  font-size: 1.4rem;
+}
+
+.material-symbols-outlined--xs {
+  font-size: 1.2rem;
+}
+
+/* Utilidades tipográficas reutilizables */
+.dex-text-display {
+  font-size: var(--text-display);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+  font-weight: var(--fw-extrabold);
+}
+
+.dex-text-headline {
+  font-size: var(--text-headline);
+  line-height: var(--lh-headline);
+  font-weight: var(--fw-bold);
+}
+
+.dex-text-title-sm {
+  font-size: var(--text-title-sm);
+  line-height: var(--lh-title-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.dex-text-body {
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+}
+
+.dex-text-label {
+  font-size: var(--text-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+
+.dex-text-label--xs {
+  font-size: 1rem;
+}
+
+/* Scrollbar (favoritos escritorio) */
+.dex-scrollbar::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.dex-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+.dex-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-surface-container-highest);
+  border-radius: 0.4rem;
+}
+
+.dex-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-container);
+}
+
+@keyframes dex-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dex-animate-spin {
+  animation: dex-spin 1s linear infinite;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle — Prism Dex</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/tokens.css"/>
+<link rel="stylesheet" href="../css/base.css"/>
+<link rel="stylesheet" href="../css/components.css"/>
+<link rel="stylesheet" href="../css/layout-shell.css"/>
+<link rel="stylesheet" href="../css/page-favoritos-escritorio.css"/>
+<link rel="stylesheet" href="../css/page-detalle-escritorio.css"/>
+</head>
+<body class="page-fav-desk dex-scrollbar">
+<button type="button" class="app-side-nav-backdrop" id="app-side-nav-backdrop" aria-label="Cerrar menú lateral" hidden></button>
+<aside id="app-side-nav" class="app-side-nav" aria-label="Navegación lateral">
+<div class="app-side-nav__profile">
+<img class="app-side-nav__avatar app-side-nav__avatar--primary-container" alt="Perfil de usuario" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANB8GD_z5z_4gTcrlemtEd3cjHsTneaKLjM0O5V5OMz1k2X4IiUifnkKxTWVNI_7J8_eqURmFoTNbjYsj1lvLAf5kd5M6FplAsAoLHaE-8-JWpfWYjg6it89wsJti2KHVMKVVzZZpgNkhEb-s4xVsmnKsuvN5QoBjb5kD11d3TukmZSKL1I032mVqP2Zp9hfVJHxI6cQxAVmrreKLNCjs4fYUsEgZ6j3o1JTtgXm9LeCqODex5xAxzdkPjyygo6pVnk0Lpv6UOUcfw"/>
+<div>
+<h2 class="app-side-nav__name">Entrenador Rojo</h2>
+<p class="app-side-nav__role">Alto Mando</p>
+</div>
+</div>
+<div class="app-side-nav__cta">
+<button type="button" class="app-side-nav__cta-btn app-side-nav__cta-btn--glow app-side-nav__cta-btn--compact">Filtro avanzado</button>
+</div>
+<nav class="app-side-nav__links" aria-label="Secciones principales">
+<a class="app-side-nav__link" href="../landing/code.html">
+<span class="material-symbols-outlined">home</span>
+Inicio
+</a>
+<a class="app-side-nav__link app-side-nav__link--active" href="../pokedex_explorar/code.html">
+<span class="material-symbols-outlined material-symbols-outlined--fill">capture</span>
+Explorar
+</a>
+<a class="app-side-nav__link" href="../mis_favoritos_escritorio/code.html">
+<span class="material-symbols-outlined">favorite</span>
+Favoritos
+</a>
+<a class="app-side-nav__link" href="code.html">
+<span class="material-symbols-outlined">description</span>
+Ficha demo
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">map</span>
+Regiones
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">bolt</span>
+Habilidades
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">category</span>
+Tipos
+</a>
+</nav>
+<div class="app-side-nav__footer">
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">settings</span>
+Ajustes
+</a>
+<a class="app-side-nav__link" href="#">
+<span class="material-symbols-outlined">logout</span>
+Cerrar sesión
+</a>
+</div>
+</aside>
+<main class="page-fav-desk__main">
+<header class="page-fav-desk__header">
+<div class="page-fav-desk__header-left">
+<button type="button" class="page-fav-desk__menu-btn app-side-nav-toggle" aria-expanded="false" aria-controls="app-side-nav" aria-label="Abrir menú de navegación">
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--open material-symbols-outlined" aria-hidden="true">menu</span>
+<span class="page-fav-desk__menu-icon page-fav-desk__menu-icon--close material-symbols-outlined" aria-hidden="true">close</span>
+</button>
+<a class="page-fav-desk__logo" href="../landing/code.html">Prism Dex</a>
+</div>
+<div class="page-fav-desk__header-right">
+<div class="page-fav-desk__search">
+<span class="material-symbols-outlined page-fav-desk__search-icon">search</span>
+<label class="visually-hidden" for="desk-search-detalle-desk">Buscar Pokémon</label>
+<input id="desk-search-detalle-desk" class="page-fav-desk__search-input" type="search" placeholder="Buscar por nombre o número..." autocomplete="off"/>
+</div>
+<div class="page-fav-desk__icon-btns">
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cambiar tema claro u oscuro">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Cuenta">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<button type="button" class="page-fav-desk__icon-btn" aria-label="Ajustes">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<div class="page-fav-desk__scroll dex-scrollbar">
+<div class="page-detalle-desk__canvas">
+<header class="app-glass-panel app-glass-panel--border-subtle page-detalle-desk__toolbar">
+<a href="../pokedex_explorar/code.html" class="page-detalle-desk__back">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="page-detalle-desk__back-text dex-text-title-sm">Volver a la Pokédex</span>
+</a>
+<div class="page-detalle-desk__dex-num">#006</div>
+<button type="button" class="page-detalle-desk__fav" aria-label="Añadir a favoritos">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</header>
+<div class="page-detalle-desk__grid">
+<div class="page-detalle-desk__col-left">
+<div class="app-glass-panel app-glass-panel--border-subtle page-detalle-desk__hero-card">
+<div class="page-detalle-desk__hero-watermark" aria-hidden="true">CHARIZARD</div>
+<img class="page-detalle-desk__hero-img" alt="Charizard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF5o-mLym7D53cvT1OhOEES-33YBBYg6mtlmNT9qhRoPMFQhDEVG6CzIHvrP3pROEkenmDHjbVYwvWe5H1SoCl9_xUlqd4kZIkr8T1rc8mzABH7Stm1Dv7ChGlY8aaNcukEmqvOPazXZ-RZyFs_sagifdHzzMWh-yToywW3yE2opu_RFLzn3BzToku67t-K1MEYe30136vOfmTqOK-lld7ZbO1Qjl9EctbvE_q2sNRMOvAo_cu6rLsBzABk-IilgGq1g0GOtXqgfa_"/>
+<h1 class="page-detalle-desk__hero-name">Charizard</h1>
+<p class="page-detalle-desk__hero-category dex-text-body">Pokémon llama</p>
+<div class="page-detalle-desk__hero-types">
+<span class="poke-type-badge poke-type-badge--fire-desk">
+<span class="material-symbols-outlined material-symbols-outlined--xs">local_fire_department</span>
+FUEGO
+</span>
+<span class="poke-type-badge poke-type-badge--flying-desk">
+<span class="material-symbols-outlined material-symbols-outlined--xs">air</span>
+VOLADOR
+</span>
+</div>
+<div class="page-detalle-desk__measures">
+<div>
+<div class="page-detalle-desk__measure-label">ALTURA</div>
+<div class="page-detalle-desk__measure-value">1.7 m</div>
+</div>
+<div>
+<div class="page-detalle-desk__measure-label">PESO</div>
+<div class="page-detalle-desk__measure-value">90.5 kg</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-detalle-desk__col-mid">
+<div class="app-glass-panel app-glass-panel--border-subtle page-detalle-desk__stats-panel">
+<h2 class="page-detalle-desk__stats-title dex-text-headline">
+<span class="material-symbols-outlined">bar_chart</span>
+Estadísticas base
+</h2>
+<div class="page-detalle-desk__stats-stack">
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">PS</span>
+<span class="poke-stat-row__value">78</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:31%"></div></div>
+</div>
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">ATA</span>
+<span class="poke-stat-row__value">84</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:33%"></div></div>
+</div>
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">DEF</span>
+<span class="poke-stat-row__value">78</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:31%"></div></div>
+</div>
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">AT. ESP.</span>
+<span class="poke-stat-row__value">109</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:43%"></div></div>
+</div>
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">DF. ESP.</span>
+<span class="poke-stat-row__value">85</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:34%"></div></div>
+</div>
+<div class="poke-stat-row poke-stat-row--compact">
+<span class="poke-stat-row__label">VEL</span>
+<span class="poke-stat-row__value">100</span>
+<div class="poke-stat-row__track"><div class="poke-stat-row__fill poke-stat-row__fill--gradient-fire" style="width:40%"></div></div>
+</div>
+</div>
+<div class="page-detalle-desk__stats-footer">
+<span class="dex-text-title-sm" style="color: var(--color-on-surface-variant);">Total</span>
+<span class="dex-text-headline" style="color: #fff;">534</span>
+</div>
+</div>
+</div>
+<div class="page-detalle-desk__col-right">
+<div class="app-glass-panel app-glass-panel--border-subtle page-detalle-desk__abilities">
+<h3 class="page-detalle-desk__abilities-title dex-text-title-sm">
+<span class="material-symbols-outlined">psychology</span>
+Habilidades
+</h3>
+<div class="page-detalle-desk__ability-list">
+<div class="page-detalle-desk__ability">
+<div class="page-detalle-desk__ability-name">Mar Llamas</div>
+<p class="page-detalle-desk__ability-desc">Potencia los movimientos de tipo Fuego cuando los PS del Pokémon están bajos.</p>
+</div>
+<div class="page-detalle-desk__ability page-detalle-desk__ability--hidden">
+<span class="page-detalle-desk__ability-tag">OCULTA</span>
+<div class="page-detalle-desk__ability-name">Poder Solar</div>
+<p class="page-detalle-desk__ability-desc">Potencia el Ataque Especial, pero reduce los PS si hace sol intenso.</p>
+</div>
+</div>
+</div>
+<div class="app-glass-panel app-glass-panel--border-subtle page-detalle-desk__evo-panel">
+<h3 class="page-detalle-desk__evo-title dex-text-title-sm">
+<span class="material-symbols-outlined">change_circle</span>
+Evolución
+</h3>
+<div class="page-detalle-desk__evo-list">
+<div class="page-detalle-desk__evo-line" aria-hidden="true"></div>
+<div class="page-detalle-desk__evo-item">
+<div class="page-detalle-desk__evo-avatar">
+<img alt="Charmander" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0d6m9TJKfphRyjjjgzLRtmy-TZMn0oyxVkOsEVy9wsEHccApTuscN77cE-1gqbLcdYliwcpgXcjo7p-QV2ho8UZe20oNun7wlYZMRLHldbvZB_mHs2UvOnKg_o7fZcV5PLLpHIUxAuOrG3rjCniFoEHQX8BVx6UkQ_nrhq1ZyT574hM2psfcjSqkjZq4RyRXsrozUWOaQf0MXfFU5Zj3kHmxPY46nkZWXfjcCrcd2mcP4JpGNFzpcNqYu6VZVZd7HezHdUuz5AaCg"/>
+</div>
+<div>
+<div class="page-detalle-desk__evo-label">Charmander</div>
+<div class="page-detalle-desk__evo-sub dex-text-label dex-text-label--xs">Niv. 1</div>
+</div>
+</div>
+<div class="page-detalle-desk__evo-item">
+<div class="page-detalle-desk__evo-avatar">
+<img alt="Charmeleon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWoAi-IHvPkSolmx7k1YI-cKKWV_nC6skj0wxOz9BZvsIL1ypPGMTtwoVeIrKxe_eHYWJn90Y7ipjt-6GAVCnNT-IJ2kiCWcTVCMNi0fRYAoF6SyGMlD2tD-jzbCIdJ5-veSPBiEnTvZG-K_A9rpRqLg4ZGXX840QN2Zxhlpc7RjL-tkI0WIUJ2djefbkF6BJ3_uIwLVa9A7dbisSwCtAJHdooMSUNt19kAldWSJY1sHAovyUpqNsl0s1PXQQ5lma82TJvx-niUGaC"/>
+</div>
+<div>
+<div class="page-detalle-desk__evo-label">Charmeleon</div>
+<div class="page-detalle-desk__evo-sub dex-text-label dex-text-label--xs">Niv. 16</div>
+</div>
+</div>
+<div class="page-detalle-desk__evo-item page-detalle-desk__evo-item--current">
+<div class="page-detalle-desk__evo-avatar page-detalle-desk__evo-avatar--active">
+<img alt="Charizard pequeño" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJCVH2snNwVRYPO4MDgdU0s0Z3CfWYPGJv6aF2m39Om6TqQqRUVV0HidgFKnmQiVI5HKYZZdcfoD9TB0Nce5xB0bvOU28D0zzkYBj1O_11jjzE2tUItx9C04vnXPuBG8vKPPKzzIk_hsYJWABLKoCUgh_3JW43XpciK4QisPkfSyY_kW4LYguxgxObGVXD_YCV-YYZ4vODJgWfKvYCiPM-_-vxGl3eoPH_D9ycBd8zv_UAOr6f7ueLuOzpr5_9spX9e0AFYpJ-rvX"/>
+</div>
+<div>
+<div class="page-detalle-desk__evo-label page-detalle-desk__evo-label--primary">Charizard</div>
+<div class="page-detalle-desk__evo-sub page-detalle-desk__evo-sub--muted dex-text-label dex-text-label--xs">Niv. 36</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="dex-text-body" style="margin-top:var(--space-xl);color:var(--color-on-surface-variant);"><a href="../detalle_de_pok_mon/code.html" style="color:var(--color-tertiary);">Ver la misma ficha en vista móvil</a></p>
+</div>
+<footer class="page-fav-desk__footer">
+<div class="page-fav-desk__footer-inner">
+<span class="page-fav-desk__footer-brand">Prism Dex</span>
+<nav class="page-fav-desk__footer-links" aria-label="Enlaces del pie">
+<a class="page-fav-desk__footer-link" href="../landing/code.html">Inicio</a>
+<a class="page-fav-desk__footer-link" href="../pokedex_explorar/code.html">Explorar</a>
+<a class="page-fav-desk__footer-link" href="../mis_favoritos_escritorio/code.html">Favoritos</a>
+<a class="page-fav-desk__footer-link" href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+</nav>
+<p class="page-fav-desk__footer-copy">Los personajes Pokémon son marcas de Nintendo/Game Freak/Creatures. Esta maqueta es educativa y usa datos públicos.</p>
+</div>
+</footer>
+</div>
+</main>
+<script src="../js/sidebar-toggle.js" defer></script>
+</body>
+</html>

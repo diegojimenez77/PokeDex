@@ -1,0 +1,116 @@
+/**
+ * Página: explorar (pokedex_explorar)
+ */
+
+.page-explorar__main {
+  max-width: var(--max-w-screen-2xl);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--container-padding) var(--space-5xl);
+}
+
+.page-explorar__section {
+  margin-bottom: var(--space-4xl);
+}
+
+.page-explorar__title {
+  margin: 0 0 var(--space-xl);
+  color: var(--color-on-background);
+}
+
+.page-explorar__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--card-gap);
+}
+
+@media (min-width: 40em) {
+  .page-explorar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48em) {
+  .page-explorar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .page-explorar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.poke-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-lg);
+}
+
+.poke-card-link:focus-visible .poke-fav-card {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 0.4rem;
+}
+
+/* Explorar: mismas tarjetas que favoritos + acento por tipo */
+.poke-fav-card__explore-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-container);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.poke-fav-card__explore-mark .material-symbols-outlined {
+  font-size: 2.4rem;
+}
+
+.page-explorar__grid .poke-fav-card--explore-grass .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(34, 197, 94, 0.14), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-grass:hover {
+  box-shadow: 0 0.8rem 3rem rgba(34, 197, 94, 0.22);
+}
+
+.page-explorar__grid .poke-fav-card--explore-fire .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(255, 85, 69, 0.12), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-fire:hover {
+  box-shadow: var(--shadow-card-hover-fire);
+}
+
+.page-explorar__grid .poke-fav-card--explore-water .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0.14), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-water:hover {
+  box-shadow: 0 0.8rem 3rem rgba(59, 130, 246, 0.22);
+}
+
+.page-explorar__grid .poke-fav-card--explore-electric .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(234, 179, 8, 0.14), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-electric:hover {
+  box-shadow: 0 0.8rem 3rem rgba(234, 179, 8, 0.22);
+}
+
+.page-explorar__grid .poke-fav-card--explore-psychic .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(168, 85, 247, 0.14), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-psychic:hover {
+  box-shadow: 0 0.8rem 3rem rgba(168, 85, 247, 0.22);
+}
+
+.page-explorar__grid .poke-fav-card--explore-dragon .poke-fav-card__wash {
+  background: linear-gradient(to bottom, rgba(249, 115, 22, 0.14), transparent);
+}
+
+.page-explorar__grid .poke-fav-card--explore-dragon:hover {
+  box-shadow: 0 0.8rem 3rem rgba(249, 115, 22, 0.22);
+}
