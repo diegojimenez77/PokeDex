@@ -1,41 +1,51 @@
 # Despliega el build de Vite a GitHub Pages (Actions).
 # Requisito en el repo: Settings → Pages → Build and deployment → Source: GitHub Actions
 name: Desplegar en GitHub Pages
+
 on:
   push:
     branches: ['main']
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: 'pages'
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar
         uses: actions/checkout@v4
+
       - name: Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+
       - name: Instalar
         run: npm ci
+
       - name: Build
         run: npm run build
         env:
           # Sitio de proyecto: https://usuario.github.io/NOMBRE-DEL-REPO/
           VITE_BASE: /${{ github.event.repository.name }}/
+
       - name: Copiar index a 404 (SPA en GitHub Pages)
         run: cp dist/index.html dist/404.html
+
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

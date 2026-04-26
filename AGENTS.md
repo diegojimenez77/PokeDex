@@ -66,6 +66,10 @@ Preferencias de código para JS:
 - Prioriza que el código sea sencillo de entender.
 - Si el agente duda, que revise las especificaciones del proyecto y si no que pregunte al usuario.
 
+Despliegue (decisión del proyecto):
+- **Hosting elegido:** GitHub Pages con despliegue automático vía **GitHub Actions** (publicar la carpeta `dist` del build de Vite).
+- **No elegido (por ahora):** Netlify, Vercel o Cloudflare Pages, que simplifican las SPA con reglas de rewrite; se pueden considerar si en el futuro se prioriza evitar el patrón `404.html` + `basename` propio de Pages en subruta de proyecto.
+
 Estructura de archivos:
 - carpeta (design)
 - AGENTS.md 

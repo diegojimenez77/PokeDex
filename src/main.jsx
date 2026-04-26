@@ -25,14 +25,25 @@ if (storedTheme === 'light') {
   document.documentElement.classList.remove('theme-light');
 }
 
-const Router =
-  typeof window !== 'undefined' && window.location.protocol === 'file:'
-    ? HashRouter
-    : BrowserRouter;
+const useFileProtocol =
+  typeof window !== 'undefined' && window.location.protocol === 'file:';
+
+const rawBase = import.meta.env.BASE_URL;
+let routerBasename;
+if (typeof rawBase === 'string' && !rawBase.startsWith('.')) {
+  const noTrailing = rawBase.replace(/\/$/, '');
+  if (noTrailing) {
+    routerBasename = noTrailing;
+  }
+}
+
+const Router = useFileProtocol ? HashRouter : BrowserRouter;
+const routerProps =
+  !useFileProtocol && routerBasename ? { basename: routerBasename } : {};
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
+    <Router {...routerProps}>
       <ThemeProvider>
         <FavoritesProvider>
           <App />
